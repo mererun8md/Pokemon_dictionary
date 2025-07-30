@@ -1,0 +1,84 @@
+<!DOCTYPE html>  
+<html lang="ja">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ミニポケモン図鑑</title>  
+    <style>  
+        /* 簡単なスタイリング */  
+        body {  
+            font-family: sans-serif;  
+            line-height: 1.6;  
+            background-color: #f4f4f4;  
+            color: #333;  
+            padding: 20px;  
+            max-width: 600px;  
+            margin: 0 auto;  
+        }  
+        h1 {  
+            color: #e3350d; /* ポケモンロゴ風の赤 */  
+            text-align: center;  
+        }  
+        .search-container {  
+            display: flex;  
+            gap: 10px;  
+            margin-bottom: 20px;  
+        }  
+        #pokemonInput {  
+            flex-grow: 1;  
+            padding: 10px;  
+            border: 2px solid #ccc;  
+            border-radius: 5px;  
+            font-size: 16px;  
+        }  
+        #searchButton {  
+            padding: 10px 20px;  
+            background-color: #3b4cca; /* ポケモンロゴ風の青 */  
+            color: white;  
+            border: none;  
+            border-radius: 5px;  
+            font-size: 16px;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        #searchButton:hover {  
+            background-color: #303ca1;  
+        }  
+        #pokemonResult {  
+            background-color: #fff;  
+            border: 2px solid #dedede;  
+            border-radius: 8px;  
+            padding: 20px;  
+            text-align: center;  
+            min-height: 200px;  
+        }  
+        #pokemonResult h2 {  
+            margin-top: 0;  
+            text-transform: capitalize; /* 名前を大文字始まりにする */  
+        }  
+        #pokemonResult img {  
+            width: 150px;  
+            height: 150px;  
+            image-rendering: pixelated; /* ドット絵をきれいに見せる */  
+        }  
+    </style>  
+</head>  
+<body>
+
+    <h1>ミニポケモン図鑑</h1>  
+    <p>ポケモンの名前か全国図鑑IDを入力して検索ボタンを押してください。</p>  
+      
+    <div class="search-container">  
+        <input type="text" id="pokemonInput" placeholder="例: pikachu または 25">  
+        <button id="searchButton">検索</button>  
+    </div>
+
+    <div id="pokemonResult">  
+        <p>ここに検索結果が表示されます</p>  
+    </div>
+
+    <!-- script.jsファイルを読み込む -->  
+    <script src="script.js" defer></script>
+
+</body>  
+</html>
